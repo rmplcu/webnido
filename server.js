@@ -13,5 +13,9 @@ app.get('/contact', (req, res) => {
     res.render('contact.ejs')
 })
 
+app.get('/description', (req, res) => {
+    res.render('description.ejs')
+})
+
 app.listen(8888)
 console.log('Server listening on port 8888')
