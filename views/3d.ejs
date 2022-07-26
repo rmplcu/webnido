@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Nido di Rongio - 3d view</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<bodyv>
+  <!-- Navbar Start -->
+  <div class="container-fluid p-0 mb-3">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+        <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav mr-auto py-0">
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/description" class="nav-item nav-link">Description</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+                <a href="/3dview" class="nav-item nav-link active">3D view</a>
+            </div>
+            <div class="input-group ml-auto " style="width: 100%; max-width: 300px; " id="date "></div>
+        </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./build/three.module.js",
+      "three/examples/jsm/loaders/GLTFLoader":"./jsm/loaders/GLTFLoader.js",
+      "three/examples/jsm/libs/stats.module":"./jsm/libs/stats.module.js",
+      "three/examples/jsm/libs/dat.gui.module":"./jsm/libs/dat.gui.module.js",
+      "three/examples/jsm/controls/OrbitControls":"./jsm/controls/OrbitControls.js"
+    }
+  }   
+  </script>
+  <canvas style="display: none; width: 100%;" class = "webgl" data-engine="three.js"></canvas>
+  <div id="loading" style="display: flex; justify-content: center; align-items: center;">
+    <img src="../img/load2.gif">
+  </div>
+  <script type="module" src="../js/3d.js"></script>
+</body>
+
+</html>
