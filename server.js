@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const ejs = require('ejs')
 const path = require('path')
@@ -28,4 +30,5 @@ app.get('/description', (req, res) => {
     res.render('description.ejs')
 })
 
-app.listen()
+app.listen(process.env.PORT)
+console.log(process.env.PORT)
