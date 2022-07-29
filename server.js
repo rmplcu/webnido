@@ -13,7 +13,7 @@ app.use(favicon(__dirname + '/public/img/favicon.ico'))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index.ejs')
 })
 
 app.get('/contact', (req, res) => {
