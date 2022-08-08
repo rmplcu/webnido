@@ -2,6 +2,8 @@ import * as THREE from "three"
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 
+const load_div = document.getElementById("loading")
+
 //scene
 const scene = new THREE.Scene()
 scene.background = new THREE.Color(0xffffff)
@@ -56,7 +58,7 @@ loader.load('../assets/portariviste.glb', (glb) => {
     document.getElementById('loading').style.display = 'none'
     canvas.style.display = 'block'
 }, (xhr) => {
-    console.log((xhr.loaded/xhr.total*100) + '% loaded')
+    load_div.innerHTML = (xhr.loaded/xhr.total*100) + '% loaded'
 }, (error) => {
     console.error(error)
 })
