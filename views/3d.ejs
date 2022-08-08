@@ -21,6 +21,15 @@
   <link href="../css/style.css" rel="stylesheet">
 </head>
 
+<style>
+  .progress-bar {
+    height: 20px;
+    background: #1da1f2;
+    box-shadow: 2px 14px 15px -7px rgba(30, 166, 250, 0.36);
+    border-radius: 50px;
+    transition: all 0.5s;
+  }
+</style>
 <body>
   <!-- Navbar Start -->
   <div class="container-fluid p-0 mb-3">
@@ -57,10 +66,9 @@
   </script>
 
   <canvas style="display: none; width: 100%;" class = "webgl" data-engine="three.js"></canvas>
-
-  <h4 id="loading_msg" style="display: flex; justify-content: center; align-items: center;"></h4>
-  <div id="loading" style="display: flex; justify-content: center; align-items: center;">
-    <img src="../img/load2.gif">
+  <div id="loading" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h4 id="loading_msg"></h4>
+    <div id="loading_bar" class="progress-bar"></div>
   </div>
 
   <script type="module" src="../js/3d.js"></script>

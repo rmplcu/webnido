@@ -57,7 +57,9 @@ loader.load('../assets/portariviste.glb', (glb) => {
     document.getElementById('loading_msg').style.display = 'none'
     canvas.style.display = 'block'
 }, (xhr) => {
-    document.getElementById('loading_msg').innerHTML = 'Loading: ' + Math.round(xhr.loaded/xhr.total*100) + '%'
+    const amt = Math.round(xhr.loaded/xhr.total*100)
+    document.getElementById('loading_msg').innerHTML = 'Loading: ' + amt + '%'
+    document.getElementById('loading_bar').style.width = (amt / 2) + '%'
 }, (error) => {
     console.error(error)
 })
